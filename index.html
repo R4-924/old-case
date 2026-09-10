@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小城旧案 · 交互小说引擎</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+  <div id="paper" class="paper">
+
+    <!-- ============ 标题栏 ============ -->
+    <header class="head">
+      <div class="head-title">
+        <span class="seal">案</span>
+        <h1 id="game-title">小城旧案</h1>
+      </div>
+      <div class="head-meta">
+        <span id="day-label">第 1 天 · 清晨</span>
+        <button id="again-btn" class="again" title="用新种子再开一局">换一局</button>
+      </div>
+    </header>
+
+    <!-- ============ 正文 ============ -->
+    <main class="layout">
+
+      <!-- 左：故事流 -->
+      <section class="story">
+        <div id="story-log" class="story-log"></div>
+        <div id="choices" class="choices"></div>
+        <form id="cmd-form" class="cmd">
+          <span class="prompt">＞</span>
+          <input id="cmd-input" class="cmd-input" type="text"
+                 placeholder="去 码头 / 翻找 / 问 某人 关于 出事那晚 / 出示 某物 给 某人 / 指认 某人"
+                 autocomplete="off" spellcheck="false">
+        </form>
+      </section>
+
+      <!-- 右：笔记本 -->
+      <aside id="notebook" class="notebook"></aside>
+    </main>
+
+    <!-- ============ 揭示屏 ============ -->
+    <div id="reveal" class="reveal" style="display:none">
+      <div id="reveal-card"></div>
+    </div>
+  </div>
+
+  <!-- ============ 模块 ============ -->
+  <script src="src/rng.js"></script>
+  <script src="src/names.js"></script>
+  <script src="src/world.js"></script>
+  <script src="src/people.js"></script>
+  <script src="src/relations.js"></script>
+  <script src="src/truth.js"></script>
+  <script src="src/dialogue.js"></script>
+  <script src="src/game.js"></script>
+  <script src="src/actions.js"></script>
+  <script src="src/ui.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
